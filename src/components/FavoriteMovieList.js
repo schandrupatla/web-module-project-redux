@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 
 
 const FavoriteMovieList = (props) => {
-    const favorites = [props.favorites];
+    const favorites = props.favorites;
     console.log("Favorites:",favorites);
     
     return (<div className="col-xs savedContainer">

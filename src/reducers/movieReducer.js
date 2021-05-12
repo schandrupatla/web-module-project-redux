@@ -1,4 +1,5 @@
 import { ADD_MOVIE, DELETE_MOVIE } from '../actions/movieActions.js';
+import {ADD_FAVORITE} from '../actions/favoriteActions'
 import movies from './../data.js';
 
 const initialState = {
