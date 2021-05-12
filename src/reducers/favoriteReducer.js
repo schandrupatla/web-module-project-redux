@@ -1,5 +1,5 @@
 import react from 'react';
-import {TOGGLE_FAVORITES, ADD_FAVORITE} from '../actions/favoriteActions'
+import {TOGGLE_FAVORITES, ADD_FAVORITE, REMOVE_FAVORITE} from '../actions/favoriteActions'
 
 const initialState ={
     favorites: [],
@@ -15,6 +15,11 @@ const initialState ={
         return{
             ...state, favorites:[...state.favorites, action.payload]
         }
+        case REMOVE_FAVORITE:  
+            return{
+                favorites: state.favorites.filter(favorite=>favorite.id!==action.payload)
+            }
+                
         default:
             return state;
     }
